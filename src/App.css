@@ -2,11 +2,18 @@
   box-sizing: border-box;
 }
 #root {
+  height: 610px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
-  flex-direction: column; 
   justify-content: center;
-  align-items: center; 
-  height: 500px;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+  font-family: Arial,sans-serif;
+  color: #878787;
+  position: relative;
 }
 .App {
   text-align: left;
@@ -15,6 +22,7 @@
   font-family: Arial,sans-serif;
   color: #878787;
   position: relative;
+
 }
 form {
   position: relative;

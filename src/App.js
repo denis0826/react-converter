@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FaSearch from 'react-icons/lib/fa/search'
 import './App.css';
 
 class App extends Component {
@@ -50,14 +51,16 @@ class App extends Component {
     return (
       <div className="App">
         <form onSubmit={this.onSubmit}>        
-          <input type="text" ref="converter"/>
-          <button type="submit">Search</button>
+          <input type="text" ref="converter" placeholder="1 USD TO PHP"/>
+          <button type="submit">
+            <FaSearch />
+          </button>
         </form>
         <div className="currency-border">
         { error ? <p className="error">{error}</p> : 
           <div>
-            <p>{` ${number} ${from} equals `}</p>
-            <p>{`${rate} ${to}`}</p>
+            <strong>{` ${number} ${from} equals `}</strong>
+            <h2>{`${rate} ${to}`}</h2>
           </div>}          
         </div>        
       </div>
